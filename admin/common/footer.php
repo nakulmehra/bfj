@@ -29,7 +29,7 @@
 	</div>
 <!-- START FOOTER -->
 <div id="footer">
-   <p>&copy; Shiso Bright. | Designed by <a href="http://www.vizzmedia.com" target="_blank">Vizz Media</a></p>
+   <p>&copy; BFJ. | Designed by <a href="http://www.vizzmedia.com" target="_blank">Vizz Media</a></p>
 </div>
 <!-- END FOOTER -->
 

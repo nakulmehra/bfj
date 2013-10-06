@@ -4,7 +4,7 @@
 	if(isset($_POST['subBtn'])){
 		$username=setPasswrd($_POST['user_login']);
 		$password=setPasswrd($_POST['user_pass']);
-		$chk=Admin::countData('admin',array('username'=>$username,'password'=>$password),array());
+		$chk=Admin::countData('admin',array('username'=>$username,'password'=>$password,'status'=>'yes'),array());
 		if($username==""){
 			$errorMsg="Enter user name to proceed";
 		}elseif($password==""){
@@ -12,7 +12,7 @@
 		}elseif($chk < 1){
 			$errorMsg="Invalid username or password";
 		}else{
-			$user = Admin::getSingle('admin',array('username'=>$username,'password'=>$password),array());
+			$user = Admin::getSingle('admin',array('username'=>$username,'password'=>$password,'status'=>'yes'),array());
 			$_SESSION['login']= '1';
 			$_SESSION['username']= $_POST['user_login'];
 			$_SESSION['userId'] = $user['id'];
@@ -23,7 +23,7 @@
 	
 	}
 	if(isset($_POST['forgetPassBtn'])){
-		$checkmail=Admin::countData('admin',array(),array());
+		$checkmail=Admin::countData('admin',array('email'=>$_POST['email'],'username'=>setPasswrd($_POST['username']),'status'=>'yes'),array());
 		if($_POST['username']==""){
 			$errorMsg="Enter username to proceed";
 		}elseif($_POST['email']==''){
@@ -31,13 +31,13 @@
 		}elseif($checkmail < 1){
 			$errorMsg="Sorry, You have given worong entery";
 		}else{
-			$userinfo=Admin::getUserInfo(md5($_POST['username']),$_POST['email']);
+			$userinfo=Admin::getSingle('admin',array('email'=>$_POST['email'],'username'=>setPasswrd($_POST['username']),'status'=>'yes'),array());
 			$subject = 'Forgot Password';
 			$to=$userinfo['email'];
 			   $message = '
 			   <html>
 				<body>
-				 <p>Dear '.$userinfo['name'].',</p>
+				 <p>Dear '.ucwords($userinfo['name']).',</p>
 				  <p>Please find your login details</p>
 					<table>
 						<tr>
@@ -58,7 +58,7 @@
 			</html>';
 			$headers    =     'MIME-Version: 1.0' . "\r\n";
 			$headers   .=    'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-			$headers   .=    "From: Shiso Bright<dasarath@vizz.in>";
+			$headers   .=    "From: BFJ<dasarath@vizz.in>";
 			$mail = mail($to,$subject,$message,$headers);
 			if($mail){
 				$errorMsg="Password has send on your email";

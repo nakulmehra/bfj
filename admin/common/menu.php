@@ -1,8 +1,3 @@
-
-<?php  
-	$pgName =  basename($_SERVER['SCRIPT_NAME']);
-	
-?>
 <!-- MENU START -->
 <div id="menu">
 	<div style='width:550px; margin:0px auto 0px auto;' >
@@ -13,11 +8,6 @@
 				</a>
 			</li>
 			</ul>
-	</div>
-	<div class="ap2">
-		<ul>
-			<li><a href="app2.php">app2</a></li>
-		</ul>
 	</div>
 </div>
 <div class="cls"></div>

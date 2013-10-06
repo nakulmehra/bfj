@@ -2,9 +2,9 @@
 	error_reporting(0);
 	session_start();
 	$host="localhost";
-	$user="root";
-	$password="";
-	$db="bfj";
+	$user="space4rb_bfj";
+	$password="FXhwF_Fq%5Si";
+	$db="space4rb_bfj";
 	$con=mysql_connect($host,$user,$password);
 	mysql_select_db($db,$con);
 	//Facebook App Id and Secret

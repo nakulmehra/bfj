@@ -3,11 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Shiso Bright</title>
+<title>BFJ</title>
 
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
-
-		<style type="text/css">	.undefined{display:none!important;}	</style>	
+<link href="css/sahoo_style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<style type="text/css">	.undefined{display:none!important;}	</style>	
 	</head>
 
 <body>

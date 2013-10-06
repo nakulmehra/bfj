@@ -1,0 +1,77 @@
+
+/*error message */.errorBlockCF{ background-color: white;border: 10px solid #023B82;border-radius:23px;   box-shadow: 0 0 98px 1px #000000;clear: both; color: #915900;display: block;font-size: 12px;font-weight: bold;height: 23%;left: 30%;margin: 0;padding: 0;position: absolute;top: 40%;width: 45.83%;z-index: 1000;}.errorBlockCFImg{float:left; text-align:center;padding:15px 0px 0px 10px;}.errorBlockCFMsg{float:left;line-height: 16px;padding: 56px 0 10px 10px;text-align: center;width: 90%; color:#000; font-size:13px; font-weight:bold;}.errorBlockCFBtn{float:left; margin: 9px 5px; width:31px;height:17px;}.errorBlockCFBtn a{color:#000; margin-left:-11px;}.close {background:url(images/icons/close-btn.png) no-repeat;width:17px;height:17px;display:block;}
+/* end error message */
+
+/* light box */
+	.page_overlay{filter:alpha(opacity=80);opacity: 0.8;background-color: black;position: fixed; width: 100%;height: 100%;top:0;left: 0;padding: 0;display: none;cursor: progress; z-index:10000;}
+	.item_wrapper{background: transparent;position: fixed;width: 100%;height: 100%;top:0;left: 0;padding: 0;display: none;cursor: progress; z-index:99999;}
+	.item_overlay{margin:100px auto;width: 500px;padding: 20px;border:10px solid #aaaaaa;background-color: white;z-index: 1000;text-align: center;cursor: default;-moz-box-shadow: 0px 0px 5px 1px white;-webkit-box-shadow: 0px 0px 5px 1px white;box-shadow: 0px 0px 5px 1px white;}
+/*  end lighty box */
+.req {color: red;font-size: 14px;font-weight: normal;}
+/*CSS FOR CALENDAR START HERE */
+/* Default styling for jQuery Datepicker v4.0.6. */
+.datepick {	background-color: #fff; color: #000;border: 1px solid #444;border-radius: 0.25em;-moz-border-radius: 0.25em;    -webkit-border-radius: 0.25em;font-family: Arial,Helvetica,Sans-serif;font-size: 90%;}.datepick-rtl {direction: rtl;}.datepick-popup {z-index: 1000;}.datepick-disable {position: absolute;z-index: 100;background-color: white;opacity: 0.5;	filter: alpha(opacity=50);}.datepick a {color: #fff;text-decoration: none;}.datepick a.datepick-disabled {color: #888;cursor: auto;}.datepick button {margin: 0.25em; padding: 0.125em 0em;background-color: #fcc;border: none;border-radius: 0.25em;-moz-border-radius: 0.25em; -webkit-border-radius: 0.25em;font-weight: bold;}.datepick-nav, .datepick-ctrl {float: left;width: 100%;background-color: #000;color: #fff;font-size: 90%;font-weight: bold;}.datepick-ctrl {	background-color: #444444;}.datepick-cmd {width: 30%;}.datepick-cmd:hover {background-color: #777;}.datepick-ctrl .datepick-cmd:hover {	background-color: #f08080;}.datepick-cmd-prevJump, .datepick-cmd-nextJump {	width: 8%;}a.datepick-cmd {	height: 1.5em;}button.datepick-cmd {	text-align: center;}.datepick-cmd-prev, .datepick-cmd-prevJump, .datepick-cmd-clear {float: left;padding-left: 2%;}.datepick-cmd-current, .datepick-cmd-today {	float: left;width: 35%;text-align: center;}.datepick-cmd-next, .datepick-cmd-nextJump, .datepick-cmd-close {float: right;padding-right: 2%;	text-align: right;}.datepick-rtl .datepick-cmd-prev, .datepick-rtl .datepick-cmd-prevJump,.datepick-rtl .datepick-cmd-clear {float: right;	padding-left: 0%;padding-right: 2%;text-align: right;}.datepick-rtl .datepick-cmd-current, .datepick-rtl .datepick-cmd-today {float: right;}.datepick-rtl .datepick-cmd-next, .datepick-rtl .datepick-cmd-nextJump,.datepick-rtl .datepick-cmd-close {float: left;padding-left: 2%;padding-right: 0%;text-align: left;}.datepick-month-nav {float: left;background-color: #777;	text-align: center;}.datepick-month-nav div {	float: left;width: 12.5%;margin: 1%;padding: 1%;}.datepick-month-nav span {color: #888;}.datepick-month-row {clear: left;}.datepick-month {float: left;width: 20em;border: 1px solid #444;	text-align: center;}.datepick-month-header, .datepick-month-header select, .datepick-month-header input {height: 1.5em;background-color: #444;color: #fff;font-weight: bold;}.datepick-month-header select, .datepick-month-header input {height: 1.4em;border: none;	width:7em;}.datepick-month-header input {	position: absolute;	display: none;}.datepick-month table {width: 100%;border-collapse: collapse;}.datepick-month thead {border-bottom: 1px solid #aaa;}.datepick-month th, .datepick-month td {margin: 0em;padding: 0em;font-weight: normal;text-align: center;}.datepick-month th {border: 1px solid #777;}.datepick-month th, .datepick-month th a {background-color: #777;color: #fff;}.datepick-month td {background-color: #eee;border: 1px solid #aaa;}.datepick-month td.datepick-week {border: 1px solid #777;}.datepick-month td.datepick-week * {background-color: #777;color: #fff;border: none;}.datepick-month a {display: block;width: 100%;padding: 0.125em 0em;background-color: #eee;color: #000;text-decoration: none;}.datepick-month span {display: block;	width: 100%;padding: 0.125em 0em;}.datepick-month td span {color: #888;}.datepick-month td .datepick-other-month {background-color: #fff;}.datepick-month td .datepick-weekend {background-color: #ddd;}.datepick-month td .datepick-today {background-color: #f0c0c0;}.datepick-month td .datepick-highlight {background-color: #f08080;}.datepick-month td .datepick-selected {background-color: #777;color: #fff;}.datepick-month th.datepick-week {background-color: #777;	color: #fff;}.datepick-status {clear: both;background-color: #ddd;text-align: center;}.datepick-clear-fix {clear: both;}.datepick-cover {display: none;display/**/: block;position: absolute;z-index: -1;filter: mask();top: -1px;left: -1px; width: 100px;  height: 100px;}
+/*CSS FOR CALENDAR END HERE */.active-sahoo{border-top:none; background-color:#ecf3f9; color:#434343;}.active-sahoo  a.active{ color:#4376b5!important; font-weight:bold;}.ucfirst{ text-transform:capitalize}.uccapital{ text-transform:uppercase }.uclower{ text-transform:lowercase }.deactive-sahoo{border-top: none;}
+.p-attribute{ float:left; padding-left:7px;}.p-check{ float:left; width:100px;}.istyle{ padding:0!important; height:auto; }.p-check input{ float:left;}.p-check strong{ float:left; width:auto; font-weight:normal; padding-left:5px; margin-top:-4px;}.active-proceed{ background: #666666!important;}#loading{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}.pagination{margin:20px auto 0 auto;}#container .pagination ul li.inactive,#container .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}#container .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}#container .pagination{width: 800px;height: 25px;}#container .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}#container .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}/***********segment****************/
+#loading-segment{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}
+
+#container-segment .pagination ul li.inactive,
+#container-segment .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}
+#container-segment .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}
+#container-segment .pagination{width: 800px;height: 25px;}
+#container-segment .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}
+#container-segment .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}
+/*************segment end*********************//***********designation****************/#loading-designation{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}#container-designation .pagination ul li.inactive,#container-designation .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}#container-designation .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}#container-designation .pagination{width: 800px;height: 25px;}#container-designation .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}#container-designation .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}/*************designation end*********************/
+/***********industry****************/
+#loading-industry{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}
+
+#container-industry .pagination ul li.inactive,
+#container-industry .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}
+#container-industry .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}
+#container-industry .pagination{width: 800px;height: 25px;}
+#container-industry .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}
+#container-industry .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}
+/*************industry end*********************/
+/***********regions****************/
+#loading-regions{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}
+
+#container-regions .pagination ul li.inactive,
+#container-regions .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}
+#container-regions .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}
+#container-regions .pagination{width: 800px;height: 25px;}
+#container-regions .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}
+#container-regions .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}
+/*************regions end*********************/
+/***********source****************/
+#loading-source{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}
+
+#container-source .pagination ul li.inactive,
+#container-source .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}
+#container-source .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}
+#container-source .pagination{width: 800px;height: 25px;}
+#container-source .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}
+#container-source .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}
+/*************source end*********************/
+
+/***********product-category****************/
+#loading-product-category{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}
+
+#container-product-category .pagination ul li.inactive,
+#container-product-category .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}
+#container-product-category .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}
+#container-product-category .pagination{width: 800px;height: 25px;}
+#container-product-category .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}
+#container-product-category .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}
+/*************product-category end*********************/
+/***********city****************/
+#loading-city{ width: 100%;margin-left:600px; position: absolute;top: 100px;left: 100px;margin-top:200px;}
+
+#container-city .pagination ul li.inactive,
+#container-city .pagination ul li.inactive:hover{background-color:#ededed;border:1px solid #bababa;cursor: default;}
+#container-city .data ul li{list-style: none; font-family:calibri!important; margin: 5px 0 5px 0;color: #000;font-size: 13px;}
+#container-city .pagination{width: 800px;height: 25px;}
+#container-city .pagination ul li{list-style: none;float: left;border: 1px solid #006699;padding: 2px 6px 2px 6px;margin: 0 3px 0 3px;font-size: 14px;color: #006699;font-weight: bold;background-color: #f2f2f2;}
+#container-city .pagination ul li:hover{color: #bababa;background-color: #006699;cursor: pointer;}
+/*************product-category end*********************/
+.go_button{background-color:#f2f2f2;border:1px solid #006699;color:#cc0000;padding:2px 6px 2px 6px;cursor:pointer;position:absolute;margin-top:-1px; margin-left:5px;}
+.total{float:right;color:#999;}

@@ -1248,3 +1248,8 @@ display: block; float: right; position: absolute; z-index: 99999; background: #F
 .ap2 ul { list-style: none; }
 .ap2 ul li { float: left; }
 .ap2 ul li a {  background-image: url(../images/app2.png); background-repeat: no-repeat;float: left;width:50px;display:block; height: 40px;text-indent:-9999px; } 
+
+.table-icon { padding: 1px 8px; margin-right: 5px; }
+.edit.table-icon { background: url(../images/i_edit.png) no-repeat; }
+.delete.table-icon { background: url(../images/i_delete.png) no-repeat; }
+.archive.table-icon { background: url(../images/i_archive.png) no-repeat; }

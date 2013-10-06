@@ -1,9 +1,11 @@
 <?php
+	
 	error_reporting(0);
 	$hostname = 'localhost';
-	$username = 'root';
-	$password = '';
-	$dbname = "bfj";
+	$username = 'space4rb_bfj';
+	$password = 'FXhwF_Fq%5Si';
+	$dbname = "space4rb_bfj";
+		
 	try {
 		$db = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
 	}
