@@ -73,8 +73,41 @@ if(!isset($_SESSION['User']) && empty($_SESSION['User'])){ ?>
 		for (var i = 0; i < document.getElementById('friendFrm').elements.length; i++) {
 		document.getElementById('friendFrm').elements[i].checked = checked;}}
 		FB.init({ appId: '611403968912012',status:true,cookie:true,xfbml:true });
-		function sendRequest(user_id,user_name,user_email){
+		function sendRequest(){
 			var chkss2 = document.getElementsByName('inviteFrnds[]');
+			var checkCountss2 = 0;
+			var article='';
+			var invite_friend_name='';
+			for (var i = 0; i < chkss2.length; i++){
+				if (chkss2[i].checked){
+					var friend_name=chkss2[i].value+"_name";
+					checkCountss2++;
+					if(article ==''){
+						article=chkss2[i].value;
+						invite_friend_name=document.getElementById(friend_name).value;
+					}else{
+						article=article+','+chkss2[i].value;
+						invite_friend_name=invite_friend_name+','+document.getElementById(friend_name).value;
+					}
+				}
+			}
+			if(checkCountss2 > 0){
+				FB.ui({method: 'apprequests',
+					to: article,
+					title: 'Biggest Fan Jeetaga',
+					message: 'Hi, I have invited you to join me in the The Body Shop Biggest Fan Jeetaga Contest. You too can stand a chance to win a Gift Voucher for Rs. 5,000/-',
+				}, callback);
+			}
+			
+		}
+		
+		function callback(response) {
+		   console.log(response);
+		   /*
+		   var user_id=document.getElementsById('user_id').value;
+		   var user_name=document.getElementsById('user_name').value;
+		   var user_email=document.getElementsById('user_email').value;
+		   var chkss2 = document.getElementsByName('inviteFrnds[]');
 			var checkCountss2 = 0;
 			var article='';
 			var invite_friend_name='';
@@ -97,15 +130,11 @@ if(!isset($_SESSION['User']) && empty($_SESSION['User'])){ ?>
 					url: "friend_class.php",
 					data: "user_id="+user_id+"&user_name="+user_name+"&user_email="+user_email+"&article="+article+"&invite_friend_name="+invite_friend_name+"&type=addprofiledetails",
 					success: function(msg){
-						FB.ui({ method:'apprequests',to:article,message:'Hi, I have invited you to join me in the The Body Shop Biggest Fan Jeetaga Contest. You too can stand a chance to win a Gift Voucher for Rs. 5,000/-',data:'tracking information for the user' });
 						window.location='thanks.php';
-						return false;
-						
 					}
-				});
-			}else{
-				alert('No friend select');
-			}
+				}); 
+			}*/
+			
 		}
 	</script>
 	<form method='post' action='' name='friendFrm' id='friendFrm'>
@@ -155,7 +184,10 @@ if(!isset($_SESSION['User']) && empty($_SESSION['User'])){ ?>
 			}
 			echo "<ul>";
 			echo "<li>";
-			echo "<input class='snd_invite' type='button' name='requestBtn' value='Send Invite' onclick=\"return sendRequest('".$user_profile['id']."','".$user_profile['name']."','".$user_profile['email']."')\" ></li>";
+			echo "<input type='hidden' name='user_id' id='user_id' value='".$user_profile['id']."'>";
+			echo "<input type='hidden' name='user_name' id='user_name' value='".$user_profile['name']."'>";
+			echo "<input type='hidden' name='user_email' id='user_email' value='".$user_profile['email']."'>";
+			echo "<input class='snd_invite' type='button' name='requestBtn' value='Send Invite' onclick=\"return sendRequest()\" ></li>";
 			echo "<li>&nbsp;</li>";
 			echo "</ul>";
 			
